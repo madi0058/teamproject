@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rowCount="3"
+    android:columnCount="2"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="32dp"
+        android:paddingBottom="20dp"
+        android:layout_row="0"
+        android:layout_columnSpan="2"
+        android:text="@string/AppSelection" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/trivia"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/trivia"
+                android:scaleType="fitCenter"
+                android:typeface="sans"
+                android:padding="20dp"
+                android:layout_margin="0dp" />
+
+            <ImageButton
+                android:id="@+id/songster"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/songster"
+                android:scaleType="fitCenter"
+                android:typeface="sans"
+                android:padding="20dp"
+                android:layout_margin="0dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/car"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/car"
+
+                android:scaleType="fitCenter"
+                android:typeface="sans"
+                android:padding="20dp"
+                android:layout_margin="0dp" />
+
+            <ImageButton
+                android:id="@+id/soccer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/soccer"
+                android:scaleType="fitCenter"
+                android:typeface="sans"
+                android:padding="20dp"
+                android:layout_margin="0dp" />
+        </TableRow>
+
+    </TableLayout>
+</GridLayout>
