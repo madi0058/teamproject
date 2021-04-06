@@ -1,5 +1,20 @@
 <resources>
     <string name="app_name">teamproject</string>
     <string name="AppSelection">Select App</string>
+    <string name="soccer_headertext">Soccer match highlights</string>
+    <string name="welcome">Welcome to Trivia API</string>
+    <string name="number">Please enter how many questions do you want</string>
+    <string name="kind">Please choose what kind of question do you want</string>
+    <string name="difficulty">Please choose the difficulty </string>
+    <string name="type">Type here</string>
+    <string name="submit">submit</string>
+    <string name="Trueorfalse">true/false</string>
+    <string name="False">false</string>
+    <string name="multiple">multiple choice</string>
+    <string name="hard">Hard</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="Both">both</string>
+
 
 </resources>
