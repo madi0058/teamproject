@@ -1,13 +1,14 @@
 package com.cst2335.teamproject;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
 
+
+public class MainActivity extends AppCompatActivity {
+    static Intent gototrivia;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 //            startActivity(gotocar);
 //        });
         trivia.setOnClickListener(clk ->{
-            Intent gototrivia= new Intent(MainActivity.this, Trivia.class);
+            gototrivia= new Intent(MainActivity.this, Trivia.class);
             startActivity(gototrivia);
         });
 //        soccer.setOnClickListener(clk ->{

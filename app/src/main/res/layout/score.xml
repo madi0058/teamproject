@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+   >
+
+    <EditText
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="498dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/name"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/s"
+        android:layout_width="210dp"
+        android:layout_height="47dp"
+        android:layout_above="@+id/nameInput"
+        android:layout_marginBottom="-105dp"
+        android:text="@string/score"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/emailInput"
+        android:layout_width="66dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/s"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="114dp"
+        android:layout_marginBottom="540dp"
+        android:text="00"
+        android:textColor="@color/black"
+        android:textSize="40sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/insert"
+        android:text="@string/submit"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:id="@+id/nameInput"
+        android:layout_width="162dp"
+        android:layout_height="46dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="604dp"
+        android:text=""
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="240dp"
+        android:layout_height="57dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="594dp"
+        android:text="@string/diff"
+        android:textSize="25sp" />
+
+    <ListView
+        android:id="@+id/the_list"
+        android:layout_width="395dp"
+        android:layout_height="443dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="52dp" />
+
+    <TextView
+        android:id="@+id/highscore"
+        android:layout_width="410dp"
+        android:layout_height="74dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="657dp"
+        android:text="TextView" />
+
+
+</RelativeLayout>

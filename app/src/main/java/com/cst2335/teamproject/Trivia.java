@@ -3,7 +3,6 @@ package com.cst2335.teamproject;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -12,9 +11,15 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 public class Trivia extends AppCompatActivity {
     RadioGroup radioGroup,deffeclty;
-    RadioButton radioButton;
+    RadioButton radioButton,dif,kind;
+    EditText number;
+    public static String num;
+   public static String diff;
+    public static String kin;
+
 
 
 
@@ -22,60 +27,63 @@ public class Trivia extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trivia);
-        EditText number= findViewById(R.id.editTextNumber);
+         number= findViewById(R.id.editTextNumber);
         TextView textView3= findViewById(R.id.textView3);
        radioGroup= findViewById(R.id.radiogroup1);
        deffeclty= findViewById(R.id.radiogroup2);
         Button submit= findViewById(R.id.button);
-//        String num= number.getText().toString();
-//        Intent intent= new Intent(this,Quiz.class);
-//        intent.putExtra("number",num);
-//        startActivity(intent);
+      Intent gotoquiz= new Intent(this, Quiz.class);
+
 
         submit.setOnClickListener(v -> {
             int majd = deffeclty.getCheckedRadioButtonId();
+            dif= findViewById(majd);
+
             int m= radioGroup.getCheckedRadioButtonId();
+            kind=findViewById(m);
             if (majd == -1) {
                 Massage.message(getApplicationContext(), "please select your kind");
             } else  {
                 findRadioButton(majd);
                 findRadioButton(m);
-                textView3.setText(String.valueOf(m));
+                num=number.getText().toString();
+                gotoquiz.putExtra("number",num);
+                diff= (String) dif.getText().toString();
+                gotoquiz.putExtra("diff",diff);
+                kin= (String) kind.getText().toString();
+                gotoquiz.putExtra("kin",kin);
+                textView3.setText(diff);
+                startActivity(gotoquiz);
+
             }
 
         });
 
-
     }
-
-
 
     private void findRadioButton(int k) {
 
         switch (k){
             case R.id.radioButton21:
-                Massage.message(getApplicationContext(),"i click 1");
+
                 break;
             case R.id.radioButton22:
-                Massage.message(getApplicationContext(),"i click 2");
+
                 break;
             case R.id.radioButton23:
-                Massage.message(getApplicationContext(),"i did 3");
+
                 break;
             case R.id.radioButton11:
 
-                Massage.message(getApplicationContext(),"i did 1");
                 break;
             case R.id.radioButton12:
-                Massage.message(getApplicationContext(),"i did 33");
-                Intent gottoquiz = new Intent(this,Quiz.class);
-                startActivity(gottoquiz);
+
                 break;
             case R.id.radioButton13:
-                Massage.message(getApplicationContext(),"you chosed hard");
-                break;
+
             default:
-                Massage.message(getApplicationContext(),"fuck");
+
+
         }
 
     }

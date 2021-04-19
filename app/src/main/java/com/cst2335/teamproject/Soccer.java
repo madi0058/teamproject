@@ -15,8 +15,8 @@ public class Soccer extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_soccer);
-        loadPbar= findViewById(R.id.progressBar);
+        setContentView(R.layout.activity_list);
+        //loadPbar= findViewById(R.id.progressBar);
         loadPbar.setVisibility(View.VISIBLE);
 
     }
